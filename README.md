@@ -2,7 +2,7 @@
 
 Private Repository for HW assignments of Stat 133 (Spring 2019)
 
-- Name: Your name (Nghi Nguyen)
+- Name: Nghi Nguyen
 - Github username: hoangkhanhnghi
 - Email: hoangkhanhnghi [at] berkeley.edu
 - Lab section: 107
