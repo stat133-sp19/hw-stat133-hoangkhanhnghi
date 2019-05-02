@@ -1,0 +1,72 @@
+---
+title: "Vignette Title"
+author: "Vignette Author"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(binomial)
+```
+
+
+## Binomial
+The package "binomial" simulates the process of getting the probability of a specific number of successes given the number of trials, the number of successes, and the probability to get that success.
+
+
+## Caculating probability
+Log in the data you have in function bin_probability in order: successes, trials, and probability.
+```{r}
+bin_probability(2,5,0.5)
+```
+
+
+## Showing table
+The "bin_distribution" function gives you a table of probabilities corresponding to each success (from 0 to trials). Enter trials and probability. The table has two classes: "bindis" and "data.frame":
+```{r}
+bin_distribution(5,0.5)
+```
+The "bin_cumulative" function gives you a table of cumulative probabilities corresponding to the successes. Enter trials and probability. The table has two classes: "bincum" and "data.frame"
+```{r}
+bin_cumulative(5,0.5)
+```
+
+
+## Summary
+Function "bin_variable" returns a list with class "binvar" and method "print.binvar" gives a short summary of object with class "binvar" 
+```{r}
+bin1 <- bin_variable(10,0.3)
+bin1
+```
+Function "summary.binvar" returns a list with full elements and class "binvar" and method "print.summary.binvar" gives a full summary of object with class "binvar" 
+```{r}
+bin1 <- bin_variable(10,0.3)
+binsum1 <- summary(bin1)
+binsum1
+```
+
+
+## Plot of relative frequencies
+You can use function "plot()" to create a graphic with the relative frequencies of a series of trials. Input must be a data frame with two classes: "bindis" and "data.frame" to create a **histogram**
+```{r,fig.show="hold"}
+dis1 <- bin_distribution(5,0.5)
+plot(dis1)
+```
+You can use function "plot()" to create a graphic with the cumulative frequencies of a series of trials. Input must be a data frame with two classes: "bincum" and "data.frame" to create a **line graph**
+```{r,fig.show="hold"}
+dis2 <- bin_cumulative(5,0.5)
+plot(dis2)
+```
+
+
+
+
+

@@ -1,0 +1,19 @@
+Package: binomial
+Title: binomial distribution
+Version: 0.0.0.9000
+Authors@R: person("Nghi", "Nguyen", email = "hoangkhanhnghi@berkeley.edu", role = c("aut", "cre"))
+Description: Provides functions for binomial distribution.
+Depends: R (>= 3.5.2)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Collate:
+    main.R
+    other-methods.R
+    plot.R
+    private.R
+Suggests: knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1
